@@ -60,7 +60,7 @@ body {
     font-size: 15px;
 }
 
-button {
+.pet-button {
     width: 80px;
     height: 30px;
     padding: 5px;
@@ -69,6 +69,14 @@ button {
     font-style: normal;
     color: #2F1B1D;
     border: 2px solid rgb(99, 54, 56);
+
+    transition: 0.15s ease;
+}
+
+.pet-button:hover {
+    cursor: pointer;
+    background-color: #FFF6E8;
+    transform: translateY(-2px);
 }
 
 .outer-container {
