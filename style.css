@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #2F1B1D;
+    height: 100vh;
+}
+
+.main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.title {
+    width: 192px;
+}
+.title h1 {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(250, 238, 215);
+    font-size: 20px;
+    text-align: center;
+}
+
+.cat {
+    /*added to align the cat*/
+    margin-left: 65px;
+    height: 192px;
+    width: 192px;
+    background-image: url('assets/Idle.png');
+    background-size: 1920px 192px;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    animation: idle 2s steps(9) infinite;
+}
+
+@keyframes idle {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: -1728px 0;
+    }
+}
+
+.label h2 {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(250, 238, 215);
+    font-size: 15px;
+}
+
+button {
+    width: 80px;
+    height: 30px;
+    padding: 5px;
+    background-color: rgb(250, 238, 215);
+    font-family: "Press Start 2P", system-ui;
+    font-style: normal;
+    color: #2F1B1D;
+    border: 2px solid rgb(99, 54, 56);
+}
+
+.outer-container {
+    height: 25px;
+    width: 200px;
+    border: 2px solid rgb(250, 238, 215);
+    display: flex;
+    align-items: center;
+    padding: 2px 3px;
+}
+
+.inner-fill {
+    height: 100%;
+    width: 25%;
+    background-color: #F3B6B6;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.meter {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
