@@ -209,6 +209,8 @@ body {
     font-style: normal;
     font-size: 15px;
     color: #F3B6B6;
+    text-align: center;
+    line-height: 1.5;
 
     animation: wishAppear 0.5s ease-out;
 }
@@ -222,7 +224,7 @@ body {
     drop-shadow(0 0 40px rgb(146, 41, 57));
 
     animation: wishAppear 0.5s ease-out 0.3s,
-    cakeFloat 2s ease infinite;
+    float 2s ease infinite;
 
     animation-fill-mode: both;
 }
@@ -253,7 +255,7 @@ body {
     }
 }
 
-@keyframes cakeFloat {
+@keyframes float {
     0% {
         transform: translateY(0);
     }
@@ -266,3 +268,53 @@ body {
         transform: translateY(0px);
     }
 }   
+
+
+.birthday-content {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    height: 100vh;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(34,20,21,0.96);
+    z-index: 9999;
+    gap: 25px;
+
+    font-family: "Press Start 2P", system-ui;
+    color: rgb(250,238,215);
+    text-align: center;
+
+    transition: opacity .4s ease;
+}
+
+.revealbutton {
+    width: 125px;
+    height: 35px;
+    padding: 5px;
+    background-color: rgb(250, 238, 215);
+    font-family: "Press Start 2P", system-ui;
+    font-size: 12px;
+    font-style: normal;
+    color: #2F1B1D;
+    border: 2px solid rgb(99, 54, 56);
+
+    transition: 0.15s ease;
+}
+
+.revealbutton:hover {
+    cursor: pointer;
+    background-color: #FFF6E8;
+    transform: translateY(-2px);
+}
+
