@@ -53,4 +53,4 @@ It combines pixel-art aesthetics, CSS animations, interactive DOM manipulation, 
 
 ---
 
-Made with ❤️ by Ash
+Made by Ash
