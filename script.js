@@ -5,6 +5,10 @@ const innerFill = document.querySelector('.inner-fill');
 const popup = document.querySelector('.popup');
 const showmeButton = document.querySelector('.showme-button');
 
+const clickSound = new Audio('assets/click.mp3');
+const sparkleSound = new Audio('assets/sparkles.mp3');
+const popSound = new Audio('assets/pop.mp3');
+
 function increasePurrMeter() {
     if (happiness < 100) {
         happiness += 25;
@@ -25,8 +29,10 @@ function makeCatPermanentlyHappy() {
     cat.classList.add('permanent-happy');
 
     setTimeout(function() {
+        popSound.currentTime = 0;
+        popSound.play();
         showPopup();
-    } ,3000)
+    } ,2000)
 }
 
 function showPopup() {
@@ -34,6 +40,7 @@ function showPopup() {
 }
 
 petButton.addEventListener('click', function() {
+    clickSound.play();
     increasePurrMeter();
     
     if (happiness < 100) {
@@ -41,10 +48,16 @@ petButton.addEventListener('click', function() {
     }
 
     if (happiness === 100) {
+        sparkleSound.currentTime = 0;
+        sparkleSound.play();
         makeCatPermanentlyHappy();
     }
 });
 
 showmeButton.addEventListener('click', function() {
-    window.location.href = 'birthday.html';
+    clickSound.currentTime = 0;
+    clickSound.play();
+    setTimeout(function() {
+        window.location.href = 'birthday.html';
+    }, 300)
 })
